@@ -1,0 +1,9 @@
+---
+- hosts: all
+  connection: local
+  
+  roles:
+    - role: wpbootstrap
+      become: yes
+      tags: wpbootstrap
+

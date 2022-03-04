@@ -1,0 +1,7 @@
+---
+- name: copy wpbootstrap.sh file
+  template:
+    src: wpbootstrap.j2
+    dest: /usr/bin/wpbootstrap.sh
+    mode: 0744
+
