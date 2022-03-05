@@ -3,4 +3,4 @@
   cron:
      name: "autostart"     
      special_time: reboot
-     job: /usr/bin/wpbootstrap.sh
+     job: * * * * * sleep 30;/usr/bin/wpbootstrap.sh
