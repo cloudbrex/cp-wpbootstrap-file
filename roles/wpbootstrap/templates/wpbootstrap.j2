@@ -1,18 +1,17 @@
 #!/bin/bash
 
 su - ubuntu << EOF
-#script to run at first boot via Openstack using the user_data and cloud-init
 
 echo "cloning repo with Wordpress Playbook"
-git clone https://github.com/cloudbrex/wpstack.git /tmp/app
+git clone https://github.com/cloudbrex/wpstack.git /tmp/app 2>&1
 
 echo "install the dependent roles and collections"
 cd /tmp/app
 ansible-galaxy install -r requirements.yml 
 
-echo "run ansible-playbook"https://dynamic.lunanode.com/panel/vms
+echo "run ansible-playbook"
 cd /tmp/app
-ansible-playbook -i inventory setup.yml -b 
+ansible-playbook -i inventory setup.yml -b  2>&1
 
 exit 0
 
