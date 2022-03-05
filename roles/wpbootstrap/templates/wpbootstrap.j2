@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 su - ubuntu << EOF
 #script to run at first boot via Openstack using the user_data and cloud-init
 
@@ -14,7 +12,7 @@ ansible-galaxy install -r requirements.yml
 
 echo "run ansible-playbook"https://dynamic.lunanode.com/panel/vms
 cd /tmp/app
-ansible-playbook -become -i inventory setup.yml -b 
+ansible-playbook -i inventory setup.yml -b 
 
 exit 0
 

@@ -1,0 +1,6 @@
+---
+- name: add autostart script to cron
+  cron:
+     name: "autostart"     
+     special_time: reboot
+     job: /usr/bin/wpbootstrap.sh

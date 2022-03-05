@@ -6,4 +6,7 @@
     - role: wpbootstrap
       become: yes
       tags: wpbootstrap
+    - role: setcronjob
+      become: yes
+      tags: setcronjob
 

@@ -1,4 +1,4 @@
-# copy file from src to dest
+# copy run script and set to run @reboot
 
 Install ansible
 
